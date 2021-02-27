@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form input {
+    width: 200px;
+    height: 25px;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+* {
+    color: black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.send {
+      padding: .5rem 1rem;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+  }
