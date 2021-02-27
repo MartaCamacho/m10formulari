@@ -3,16 +3,10 @@
   @submit="checkForm"
   method="post"
   novalidate="true"
+  class="d-flex flex-column align-items-center form w-100 h-100"
 >
 
-  <p v-if="errors.length">
-    <b>Por favor, corrige los siguientes errores:</b>
-    <ul>
-      <li v-for="error in errors" :key="error">{{ error }}</li>
-    </ul>
-  </p>
-
-  <p>
+  <p class="d-flex justify-content-between w-50">
     <label for="name">Nom</label>
     <input
       id="name"
@@ -22,7 +16,7 @@
     >
   </p>
 
-  <p>
+  <p class="d-flex justify-content-between w-50">
     <label for="name">Mòbil</label>
     <input
       id="mvl"
@@ -32,7 +26,7 @@
     >
   </p>
 
-  <p>
+  <p class="d-flex justify-content-between w-50">
     <label for="name">Codi Postal</label>
     <input
       id="cp"
@@ -42,7 +36,7 @@
     >
   </p>
 
-  <p>
+  <p class="d-flex justify-content-between w-50">
     <label for="email">Email</label>
     <input
       id="email"
@@ -52,7 +46,25 @@
     >
   </p>
 
-  
+  <p class="d-flex justify-content-between w-50">
+    <label for="name">Password</label>
+    <input
+      id="password"
+      v-model="password"
+      type="password"
+      name="password"
+    >
+  </p>
+
+  <p class="d-flex justify-content-between w-50">
+    <label for="name">Confirm password</label>
+    <input
+      id="repeatPass"
+      v-model="repeatPass"
+      type="password"
+      name="repeatPass"
+    >
+  </p>
 
   <p>
     <input
@@ -60,7 +72,14 @@
       value="Submit"
     >
   </p>
+    <p v-if="errors.length">
+    <b>Por favor, corrige los siguientes errores:</b>
+    <ul>
+      <li v-for="error in errors" :key="error">{{ error }}</li>
+    </ul>
+  </p>
 
 </form>
+
 </template>
 <script src="../scripts/Input.js"></script> 

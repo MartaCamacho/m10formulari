@@ -8,6 +8,8 @@ export default {
             email: null,
             mvl: null,
             cp: null,
+            password: null,
+            repeatPass: null,
         }
     },
     methods: {
@@ -35,6 +37,12 @@ export default {
             this.errors.push('Código postal requerido.');
           } else if (isNaN(this.cp) === true) {
             this.errors.push('El cp debe ser solo números.');
+          }
+          if(!this.password){
+            this.errors.push('Contraseña requerida.');
+          }
+          if(!this.repeatPass || this.repeatPass != this.password){
+            this.errors.push('Las contraseñas no coinciden.');
           }
           
 
