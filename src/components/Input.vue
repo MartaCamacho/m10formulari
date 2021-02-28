@@ -70,6 +70,7 @@
     <input
       type="submit"
       value="Submit"
+      class="text-white submit-button"
     >
   </p>
     <p v-if="errors.length">
@@ -83,3 +84,6 @@
 
 </template>
 <script src="../scripts/Input.js"></script> 
+<style scoped>
+@import url(../styles/css/Input.css);
+</style>

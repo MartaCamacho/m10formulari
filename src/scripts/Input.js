@@ -15,8 +15,6 @@ export default {
     methods: {
         checkForm: function (e) {
           this.errors = [];
-          
-          console.log(isNaN(this.mvl))
     
           if (!this.name) {
             this.errors.push("Nombre requerido.");
@@ -40,7 +38,10 @@ export default {
           }
           if(!this.password){
             this.errors.push('Contraseña requerida.');
+          } else if (!this.validPassword(this.password)) {
+            this.errors.push('La contraseña debe tener entre 6 y 13 caracteres y contener mayúsculas y minúsculas.');
           }
+
           if(!this.repeatPass || this.repeatPass != this.password){
             this.errors.push('Las contraseñas no coinciden.');
           }
@@ -56,6 +57,10 @@ export default {
         validEmail: function (email) {
           var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
           return re.test(email);
+        },
+        validPassword: function (password) {
+          var re = /^(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,13}$/;
+          return re.test(password);
         }
       }
 }
