@@ -26,10 +26,14 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.send {
-      padding: .5rem 1rem;
-      border-radius: 5px;
-      background-color: black;
-      color: white;
-      font-weight: bold;
-  }
+
+  .submit-button {
+    padding: .5rem 1rem 2rem 1rem;
+    width: 6rem !important;
+    background-color: green;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    font-size: larger;
+}
