@@ -27,7 +27,6 @@ export default {
     },
     methods: {
       checkInputs: function() {
-        console.log(this.name, 'name')
         if(!this.name || !this.email || !this.mvl || !this.cp || !this.password || !this.repeatPass) {
           return true 
         } else {

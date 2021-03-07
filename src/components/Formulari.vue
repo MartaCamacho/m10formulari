@@ -11,7 +11,7 @@
       <InputCp :cp="cp" type="text" v-model="cp" placeholder="C.P." />
       <InputMail :email="email" type="email" v-model="email" placeholder="E-mail" />
       <InputPass :password="password" type="password" v-model="password" placeholder="Contraseña"/>
-      <InputRepeatPass :repeatPass="repeatPass" type="password" v-model="repeatPass" placeholder="Repite tu contraseña"/>
+      <InputRepeatPass :password="password" :repeatPass="repeatPass" type="password" v-model="repeatPass" placeholder="Repite tu contraseña"/>
       <p>
         <input
         type="submit"

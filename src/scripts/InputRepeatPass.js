@@ -1,6 +1,6 @@
 export default {
     name: "InputRepeatPass",
-    props: ['repeatPass',  'placeholder', 'type'],
+    props: [ 'password', 'repeatPass',  'placeholder', 'type'],
     data() {
         return {
             errors: [],
