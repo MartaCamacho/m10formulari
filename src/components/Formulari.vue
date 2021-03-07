@@ -18,7 +18,6 @@
         value="Submit"
         class="text-white submit-button"
         :disabled="checkInputs()"
-        @click.prevent="checkForm"
         >
       </p> 
     </form>
