@@ -1,7 +1,6 @@
 <template>
   <div >
     <form
-      @submit="checkForm()"
       method="post"
       novalidate="true"
       class="d-flex flex-column align-items-center form w-100 h-100"
