@@ -10,9 +10,11 @@ export default {
         checkNum: function (e) {
           this.errors = []
           if (!this.mvl) {
-            this.errors.push('Movil requerido.');
+            this.errors.push('Móvil requerido.');
           } else if (isNaN(this.mvl) === true) {
-            this.errors.push('El movil debe ser solo números.');
+            this.errors.push('El móvil debe ser solo números.');
+          } else if (this.mvl.length !== 9 ) {
+            this.errors.push('El móvil debe tener 9 caracteres.');
           }
           if (!this.errors.length) {
             return true;

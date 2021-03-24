@@ -16,6 +16,7 @@
         type="submit"
         value="Submit"
         class="text-white submit-button"
+        @submit.prevent="sendForm"
         :disabled="checkInputs()"
         >
       </p> 
